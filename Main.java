@@ -1,5 +1,9 @@
 public class Main {
     public static void main(String[] args){
-        System.out.println("Olá");
+        Aluno pedro = new Aluno("Pedro", 19, "Carro");
+        pedro.agendarAulaTeorica();
+        pedro.agenderAulaPratica();
+        pedro.cancelarAulaPratica();
+        pedro.cancelarAulaPratica();
     }
 }
