@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Aluno {
     String nome;
     int idade;
@@ -37,7 +39,15 @@ public class Aluno {
             this.aulasPraticas -= 1;
             System.out.printf("Você tem %d aula(s) práticas %n", this.aulasPraticas);
         } else {
-            System.out.println("NÃO A AULAS PRÁTICAS PARA CANCELAR %n");
+            System.out.println("NÃO A AULAS PRÁTICAS PARA CANCELAR");
+        }
+    }
+
+    public void realizarExame(){
+        if(this.aulasPraticas >= 5 && this.aulasTeoricas >= 5){
+            System.out.println("AULA AGENDADA COM SUCESSO");
+        } else {
+            System.out.printf("VOCÊ NÃO TEM AULAS O SUFICIENTE / Aulas Práticas: %d - Aulas Teóricas: %d %n", this.aulasPraticas, this.aulasTeoricas);
         }
     }
 }

@@ -5,5 +5,6 @@ public class Main {
         pedro.agenderAulaPratica();
         pedro.cancelarAulaPratica();
         pedro.cancelarAulaPratica();
+        pedro.realizarExame();
     }
 }
