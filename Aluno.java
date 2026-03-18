@@ -32,7 +32,7 @@ public class Aluno {
     public void cancelarAulaTeorica(int qtd){
         if (this.aulasTeoricas >= qtd){
             this.aulasTeoricas -= qtd;
-            System.out.printf("%S tem %d aula(s) teóricas %n", this.nome, this.aulasPraticas);
+            System.out.printf("AULA(S) TEÓRICA(S) CANCELADAS COM SUCESSO - %S tem %d aula(s) teóricas %n", this.nome, this.aulasPraticas);
         } else {
             System.out.printf("%S TEM MENOS QUE %d AULAS PRÁTICAS PARA CANCELAR %n", this.nome, qtd);
         }
@@ -41,7 +41,7 @@ public class Aluno {
     public void cancelarAulaPratica(int qtd){
         if (this.aulasPraticas >= qtd){
             this.aulasPraticas -= qtd;
-            System.out.printf("%S tem %d aula(s) práticas %n", this.nome, this.aulasPraticas);
+            System.out.printf("AULA(S) PRÁTICA(S) CANCELADAS COM SUCESSO - %S tem %d aula(s) práticas %n", this.nome, this.aulasPraticas);
         } else {
             System.out.printf("%S TEM MENOS QUE %d AULAS PRÁTICAS PARA CANCELAR %n", this.nome, qtd);
         }
@@ -50,7 +50,6 @@ public class Aluno {
     public void realizarExame(){
         if(this.aulasPraticas >= 5 && this.aulasTeoricas >= 5){
             Random random = new Random();
-            System.out.println(random.nextBoolean());
             this.aprovado = random.nextBoolean();
             if (this.aprovado){
                 System.out.printf("PARABÉNS %S VOCÊ FOI APROVADO %n", this.nome);
